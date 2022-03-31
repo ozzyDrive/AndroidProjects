@@ -45,7 +45,7 @@ public class PageMemory {
 
     private void removeTrailingPages() {
         if (!isCursorAtEnd()) {
-            for (int index = cursor + 1; index < urlArray.size(); index++) {
+            for (int index = urlArray.size() - 1; index > cursor; index--) {
                 urlArray.remove(index);
             }
         }
